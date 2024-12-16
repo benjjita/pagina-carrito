@@ -27,7 +27,7 @@ function cargarcarrito() {
         total += subtotal;
 
         lista.innerHTML = `
-            <td><img src="${productocarrito.urlImagen}" width="50"></td>
+            <td><img src="${productocarrito.urlImagen}" width="40px"></td>
             <td>${productocarrito.cantidad}</td>
             <td>${productocarrito.nombre}</td>
             <td>${productocarrito.precio}</td>
