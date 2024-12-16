@@ -11,7 +11,6 @@ function cargarmenu() {
     lista.innerHTML =`<a href=${menu.url}>${menu.nombre}</a>`;
     enlaces.appendChild(lista);
 }
-    <img src="carrito.png" alt="" style="height: 40px; width: 40px;">
 }
 cargarmenu()  
 
