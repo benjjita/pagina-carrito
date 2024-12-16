@@ -69,38 +69,6 @@ header {
     margin-right: 20px;
 }
 
-#carrito {
-    position: relative;
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-}
-
-#carrito-logo {
-    width: 24px;
-    height: 24px;
-    background-image: url("img/carrito.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#carrito-globo {
-    position: absolute;
-    top: -5px;
-    right: -5px;
-    width: 20px;
-    height: 20px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 12px;
-    font-weight: bold;
-    visibility: hidden;
-}
-
 #ulmenu {
     display: flex;
     padding-right: 50px;
