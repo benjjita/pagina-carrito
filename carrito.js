@@ -5,12 +5,13 @@ const menus = [{nombre: "Inicio", url: "index.html"},
 ]
 
 function cargarmenu() {
-let enlaces = document.getElementById("ulmenu")
-for (const menu of menus) {
-let lista = document.createElement("li")
-lista.innerHTML =`<a href=${menu.url}>${menu.nombre}</a>`;
-enlaces.appendChild(lista);
+    let enlaces = document.getElementById("ulmenu")
+    for (const menu of menus) {
+    let lista = document.createElement("li")
+    lista.innerHTML =`<a href=${menu.url}>${menu.nombre}</a>`;
+    enlaces.appendChild(lista);
 }
+    <img src="carrito.png" alt="" style="height: 40px; width: 40px;">
 }
 cargarmenu()  
 
