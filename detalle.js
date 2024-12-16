@@ -1,46 +1,18 @@
-const menus = [
-  {nombre: "Inicio", url: "index.html"},
-  {nombre: "¿Quienes somos?", url: "quienes.html"},
-  {nombre: "Contacto", url: "contacto.html"},
-  {nombre: "Carrito", url: "carrito.html"},
-];
-
-let productosEnCarrito = 0;
+const menus = [{nombre: "Inicio", url: "index.html"},
+            {nombre: "¿Quienes somos?", url: "quienes.html"},
+            {nombre: "Contacto", url: "contacto.html"},
+            {nombre: "Carrito", url: "carrito.html"},
+]
 
 function cargarmenu() {
-  let enlaces = document.getElementById("ulmenu");
-  for (const menu of menus) {
-      let lista = document.createElement("li");
-      if (menu.nombre === "Carrito") {
-          lista.innerHTML = `<a href=${menu.url} id="carrito-link"><div id="carrito">
-                              <div id="carrito-logo"></div>
-                              <span>Carrito</span>
-                              <div id="carrito-globo"></div>
-                            </div></a>`;
-      } else {
-          lista.innerHTML = `<a href=${menu.url}>${menu.nombre}</a>`;
-      }
-      enlaces.appendChild(lista);
-  }
+    let enlaces = document.getElementById("ulmenu")
+    for (const menu of menus) {
+        let lista = document.createElement("li")
+        lista.innerHTML =`<a href=${menu.url}>${menu.nombre}</a>`;
+        enlaces.appendChild(lista);
+    }
 }
-
-function agregarAlCarrito() {
-  productosEnCarrito++;
-  actualizarCarrito();
-}
-
-function actualizarCarrito() {
-  let globo = document.getElementById("carrito-globo");
-
-  if (productosEnCarrito > 0) {
-      globo.style.visibility = 'visible';
-      globo.textContent = productosEnCarrito;
-  } else {
-      globo.style.visibility = 'hidden';
-  }
-}
-
-cargarmenu();
+cargarmenu() 
 
 let productodetalle = JSON.parse(localStorage.getItem("detalleproducto"))
 
