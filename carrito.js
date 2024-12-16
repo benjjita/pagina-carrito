@@ -18,13 +18,13 @@ let productocarritos = JSON.parse(localStorage.getItem("carrito"));
 
 function cargarcarrito() {
     let enlaces = document.getElementById("tablacarrito");
-    let total = 0; // Inicializamos el total
+    let total = 0;
 
     for (const productocarrito of productocarritos) {
         let lista = document.createElement("tr");
         lista.id = `${productocarrito.id}`;
         const subtotal = productocarrito.cantidad * productocarrito.precio;
-        total += subtotal; // Sumamos el subtotal al total
+        total += subtotal;
 
         lista.innerHTML = `
             <td><img src="${productocarrito.urlImagen}" width="50"></td>
@@ -37,7 +37,6 @@ function cargarcarrito() {
         enlaces.appendChild(lista);
     }
 
-    // Mostrar el total
     let totalRow = document.createElement("tr");
     totalRow.innerHTML = `
         <td colspan="4" style="text-align:right;"><strong>Total:</strong></td>
@@ -54,9 +53,8 @@ function eliminarproducto(id) {
     const enJSON = JSON.stringify(productocarritos);
     localStorage.setItem("carrito", enJSON);
 
-    // Recalcular el carrito después de eliminar
-    document.getElementById("tablacarrito").innerHTML = ""; // Limpiamos la tabla
-    cargarcarrito(); // Recargamos los datos actualizados
+    document.getElementById("tablacarrito").innerHTML = "";
+    cargarcarrito();
 }
 
 cargarcarrito();
