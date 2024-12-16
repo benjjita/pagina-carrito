@@ -79,7 +79,7 @@ header {
 #carrito-logo {
     width: 24px;
     height: 24px;
-    background-image: url('ruta/a/tu/logo.png'); /* Reemplaza con la ruta de tu logo */
+    background-image: url("img/carrito.png");
     background-size: contain;
     background-repeat: no-repeat;
 }
@@ -98,7 +98,7 @@ header {
     align-items: center;
     font-size: 12px;
     font-weight: bold;
-    visibility: hidden; /* Oculto por defecto */
+    visibility: hidden;
 }
 
 #ulmenu {
