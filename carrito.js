@@ -54,16 +54,6 @@ function eliminarproducto(id) {
     localStorage.setItem("carrito", enJSON);
 
     document.getElementById("tablacarrito").innerHTML = "";
-    cargarcarrito();
 }
 
 cargarcarrito();
-
-function eliminarproducto(id) {
-    let nodo = document.getElementById(id);
-    nodo.remove();
-    id = parseInt(id)
-    productosActualizados = productocarritos.filter(producto => producto.id !== id);
-    const enJSON    = JSON.stringify(productosActualizados);
-    localStorage.setItem("carrito", enJSON)
-}
