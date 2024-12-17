@@ -53,6 +53,9 @@ function eliminarproducto(id) {
     document.getElementById("tablacarrito").innerHTML = "";
     
     cargarcarrito();
+    actualizarContadorCarrito();
 }
 
 cargarcarrito();
+
+actualizarContadorCarrito();

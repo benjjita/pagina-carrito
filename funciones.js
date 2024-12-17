@@ -118,3 +118,4 @@ function verdetalle(idproducto) {
   window.location.href="detalle.html"
 }
 
+actualizarContadorCarrito();
