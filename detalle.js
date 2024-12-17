@@ -45,7 +45,7 @@ let contador = 0;
 function sumar() {
     let nstock = productodetalle.stock
     if (contador<nstock) {
-        contador = contador + 1;
+        contador++
         document.getElementById("contarproducto").innerHTML = contador;
     } else {
         alert("Stock máximo de producto")
@@ -54,7 +54,7 @@ function sumar() {
 
 function restar() {
     if (contador>0) {
-        contador = contador - 1;
+        contador--
         document.getElementById("contarproducto").innerHTML = contador;
     } 
     
@@ -78,6 +78,15 @@ function cargarcarrito() {
         carrito.push(productonuevo);
         const enJSON    = JSON.stringify(carrito);
         localStorage.setItem("carrito", enJSON)
+        let totalProductos = parseInt(localStorage.getItem("totalProductos")) || 0;
+        totalProductos += parseInt(cantidadproducto);
+
         window.location.href="carrito.html"
     }
 }
+function actualizarContador() {
+    let totalProductos = parseInt(localStorage.getItem("totalProductos")) || 0;
+    document.getElementById("contador").innerHTML = totalProductos;
+}
+
+actualizarContador();
