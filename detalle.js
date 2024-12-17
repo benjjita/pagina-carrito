@@ -78,15 +78,15 @@ function cargarcarrito() {
         carrito.push(productonuevo);
         const enJSON    = JSON.stringify(carrito);
         localStorage.setItem("carrito", enJSON)
-        let totalProductos = parseInt(localStorage.getItem("totalProductos")) || 0;
+        let totalProductos = parseInt(localStorage.getItem("totalProductos"));
         totalProductos += parseInt(cantidadproducto);
 
         window.location.href="carrito.html"
     }
 }
 function actualizarContador() {
-    let totalProductos = parseInt(localStorage.getItem("totalProductos")) || 0;
-    document.getElementById("contador").innerHTML = totalProductos;
+    let totalProductos = parseInt(localStorage.getItem("totalProductos"));
+    document.getElementById("contador").textContent = totalProductos;
 }
 
 actualizarContador();
