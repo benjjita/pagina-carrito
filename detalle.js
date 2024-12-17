@@ -80,7 +80,7 @@ function cargarcarrito() {
         localStorage.setItem("carrito", enJSON)
         let totalProductos = parseInt(localStorage.getItem("totalProductos"));
         totalProductos += parseInt(cantidadproducto);
-
+        localStorage.setItem("totalProductos", totalProductos);
         window.location.href="carrito.html"
     }
 }
