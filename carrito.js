@@ -56,6 +56,10 @@ function eliminarproducto(id) {
     actualizarContadorCarrito();
 }
 
+function finalizar() {
+    alert("Finalizando la compra...")
+}
+
 cargarcarrito();
 
 actualizarContadorCarrito();
